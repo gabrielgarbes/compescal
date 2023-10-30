@@ -1,7 +1,7 @@
 import sys
 from pathlib import Path
 file = Path(__file__).resolve()
-root = file.parents[2]
+root = file.parents[1]
 sys.path.append(str(root))
 
 from _util.decorator.log import log_etl_process
