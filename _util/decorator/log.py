@@ -5,8 +5,8 @@ from datetime import datetime
 # Função para criar uma linha de registro
 def create_log_entry(start_time, end_time, num_records, table_name):
     duration = int((end_time - start_time).total_seconds())
-    current_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-    return ["data_inicio_carga", "data_fim_carga", "tempo_carga", "quantidade_registros", "data_execucao", "tabela_rotina"], [start_time, end_time, duration, num_records, current_time, table_name]
+    # current_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    return ["data_inicio_carga", "data_fim_carga", "tempo_carga", "quantidade_registros", "tabela_rotina"], [start_time, end_time, duration, num_records, table_name]
 
 # Função decorator para registrar informações em um arquivo CSV
 def log_etl_process(csv_filename):
